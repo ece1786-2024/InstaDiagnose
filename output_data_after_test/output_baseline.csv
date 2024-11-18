@@ -1,0 +1,331 @@
+,disease,diagnoses,manual_label,Score,description
+0,allergy,"Illness List:
+    1. Contact Dermatitis
+    2. Allergic Reaction
+    3. Eczema (Atopic Dermatitis)
+    4. Angioedema",1,3,"My skin is itchy and red. Sometimes, it can peel. My lips and cheeks swell, and it is really annoying. I sometimes get headaches and watery eyes because of the swelling."
+1,allergy,"Illness List:
+    1. Allergic Rhinitis
+    2. Viral Upper Respiratory Infection (Common Cold)
+    3. Sinusitis
+    4. Angioedema",1,5,"I have a sore throat and I am sneezing all the time. Sometimes my face swells up, especially my lips and the area around my eyes. I can't stop sneezing once I start."
+2,allergy,"Illness List:
+    1. Anaphylaxis
+    2. Gastroesophageal Reflux Disease (GERD)
+    3. Panic Attack
+    4. Upper Respiratory Infection",0,0,"I feel sick to my stomach, lightheaded, and dizzy. My throat is swollen and I can't breathe well. I sometimes feel pain in my chest and nausea at night."
+3,arthritis,"Illness List:
+    1. Rheumatoid Arthritis
+    2. Fibromyalgia
+    3. Lupus
+    4. Polymyalgia Rheumatica",1,5,I've been feeling really weak in my muscles and my neck has been really stiff. My joints have been swelling up and it's hard for me to move around without feeling stiff. Walking has been really painful too.
+4,arthritis,"Illness List:
+    1. Rheumatoid Arthritis
+    2. Osteoarthritis
+    3. Fibromyalgia
+    4. Polymyalgia Rheumatica",1,5,"I've been having a lot of pain in my joints, especially in my neck and shoulders. It's hard to move around and I'm always feeling stiff. I've also been having trouble sleeping because of the pain."
+5,arthritis,"Illness List:
+    1. Rheumatoid Arthritis
+    2. Polymyalgia Rheumatica
+    3. Myositis
+    4. Fibromyalgia",1,5,My neck has been extremely stiff and my muscles have been extremely weak. I have difficulty moving around without feeling stiff because of the swelling in my joints. Walking is also very difficult.
+6,bronchial asthma,"Illness List:
+    1. Asthma
+    2. Chronic Obstructive Pulmonary Disease (COPD)
+    3. Bronchitis
+    4. Pneumonia",1,5,"I've been having a hard time breathing lately. I feel like I can't get enough air, and my chest feels tight. I've also been coughing a lot, and I've been producing a lot of mucus."
+7,bronchial asthma,"Illness List:
+    1. Acute Bronchitis
+    2. Pneumonia
+    3. Chronic Obstructive Pulmonary Disease (COPD) exacerbation
+    4. Asthma",1,1,"I've been having a hard time breathing. I've been coughing a lot and I'm coughing up a lot of thick, sticky mucus. I've also been feeling really tired and weak."
+8,bronchial asthma,"Illness List:
+    1. Pneumonia
+    2. Chronic Obstructive Pulmonary Disease (COPD) exacerbation
+    3. Acute Bronchitis
+    4. Influenza",0,0,"I have a cough that has been going on for a few days, and I feel really weak and tired. I have a high fever, and my breathing is getting harder. I also cough up a lot of mucus."
+9,cervical spondylosis,"Illness List:
+    1. Multiple Sclerosis
+    2. Spinal Cord Compression
+    3. Lung Cancer
+    4. Lyme Disease",0,0,I have been having back pain for a while now. It's been getting worse lately. I also have a cough that won't go away. I've been feeling weak in my arms and legs. My neck hurts and I've been feeling dizzy and off balance.
+10,cervical spondylosis,"Illness List:
+    1. Cervical Radiculopathy
+    2. Cervical Spondylosis
+    3. Herniated Cervical Disc
+    4. Multiple Sclerosis",1,3,"I've been having trouble with my neck. It's been hurting, and I've been having trouble staying balanced. I've also been having numbness in my arms and legs."
+11,cervical spondylosis,"Illness List:
+    1. Cervical Spondylosis
+    2. Multiple Sclerosis
+    3. Vertebrobasilar Insufficiency
+    4. Thoracic Outlet Syndrome",1,5,"I've been having a lot of trouble with my neck. It's been hurting, and I've been having problems with vertigo and balance loss. I've also been having a persistent cough, weakness in my arms and legs, and severe back pain."
+12,chicken pox,"Illness List:
+    1. Viral infection (e.g., measles or rubella)
+    2. Food poisoning
+    3. Dengue fever
+    4. Scarlet fever",0,0,I am feeling very sick. I have no appetite and I feel like vomiting. I have also noticed some red spots on my skin. I am worried about my health.
+13,chicken pox,"Illness List:
+    1. Sleep Apnea
+    2. Chronic Fatigue Syndrome
+    3. Hypothyroidism
+    4. Depression",0,0,"I've been feeling really tired lately. I can barely keep my eyes open during the day, and I've been feeling lethargic and unable to motivate myself. I've also been having a lot of trouble sleeping."
+14,chicken pox,"Illness List:
+    1. Chickenpox
+    2. Measles
+    3. Allergic Reaction
+    4. Scarlet Fever",1,5,I have rashes on my arms and neck that itch when I scratch them. I also have a fever. I don't know what is causing it. The itching is really bothering me.
+15,common cold,"Illness List:
+    1. Upper respiratory tract infection (common cold or flu)
+    2. Sinusitis 
+    3. Mononucleosis
+    4. COVID-19",1,5,I feel weak and my lymph nodes are swollen. My eyes burn and my throat hurts. My sinuses are congested and my nose is stuffy. I can't smell anything and my chest hurts.
+16,common cold,"Illness List:
+    1. Influenza
+    2. Common Cold
+    3. Sinusitis
+    4. Acute Bronchitis",1,3,"I've been coughing a lot and I'm freezing. My nose is stuffed up and my face hurts. I've also been coughing up some nasty stuff, my chest hurts, and my muscles hurt. I can't smell anything."
+17,common cold,"Illness List:
+    1. Common Cold
+    2. Allergic Rhinitis
+    3. Sinusitis
+    4. Strep Throat",1,5,"I've been sneezing a lot, and I feel really tired. I have a lot of gunk in my nose and throat, and my throat hurts. My neck also feels swollen."
+18,dengue,"Illness List:
+    1. Viral infection (e.g., measles, rubella)
+    2. Autoimmune disease (e.g., lupus)
+    3. Allergic reaction
+    4. Food poisoning",0,0,"I have been feeling very tired and weak. I have also been vomiting and have developed rashes on my arms, neck, and legs. "
+19,dengue,"Illness List:
+    1. Sinusitis
+    2. Migraine
+    3. Influenza
+    4. Tension Headache",0,0,I have been having a really bad headache that is behind my eyes. I also have no appetite and feel really cold at night. 
+20,dengue,"Illness List:
+    1. Viral Infection (e.g., Measles)
+    2. Autoimmune Disorder (e.g., Lupus)
+    3. Allergic Reaction
+    4. Erythema Multiforme",0,0,"I have been feeling very tired and weak. I have also been vomiting and have developed rashes on my arms, neck, and legs. "
+21,diabetes,"Illness List:
+    1. Diabetes Mellitus
+    2. Hypothyroidism
+    3. Anxiety Disorder
+    4. Chronic Fatigue Syndrome",1,5,I have mood swings and have trouble concentrating. My mind feels hazy and foggy at times and it gets difficult to do even regular chores. I also have a lot of thirst and I have to pee a lot.
+22,diabetes,"Illness List:
+    1. Diabetes Mellitus
+    2. Hyperthyroidism
+    3. Diabetes Insipidus
+    4. Sjogren's Syndrome",1,5,I've been drinking a lot more water and going to the bathroom a lot more often. My mouth and throat are always dry. I've been really hungry and eating a lot more lately.
+23,diabetes,"Illness List:
+    1. Anemia
+    2. Diabetes
+    3. Chronic Fatigue Syndrome
+    4. Hypothyroidism",1,3,I'm always feeling tired and worn out. My vision is blurry and seems to be getting worse. I also get dizzy and lightheaded sometimes.
+24,drug reaction,"Illness List:
+    1. Myocardial infarction (heart attack)
+    2. Gastroesophageal reflux disease (GERD)
+    3. Panic attack
+    4. Acute gastritis",0,0,I have been feeling very sick lately. I have been having chest pain and I feel very nauseous. I also sweat a lot.
+25,drug reaction,"Illness List:
+    1. Gastroesophageal reflux disease (GERD)
+    2. Costochondritis
+    3. Panic attack
+    4. Angina",0,0,I have a lot of nausea and chest pain. My chest has been hurting for a while now. I shiver a lot and I'm really anxious.
+26,drug reaction,"Illness List:
+    1. Medication Side Effects
+    2. Anxiety Disorders
+    3. Sleep Disorders
+    4. Electrolyte Imbalance",1,5,I have been having headaches and migraines. I have been having difficulty sleeping. I have been having muscle twitching and tremors. Sometimes I get lightheaded. I think it might be a reaction to my medication.
+27,fungal infection,"Illness List:
+    1. Allergic reaction
+    2. Eczema
+    3. Psoriasis
+    4. Chickenpox",0,0,I have a rash all over my body. It is itchy and red. There are some patches that are a different color than the rest of my skin. I also have some pimples that look like little balls.
+28,fungal infection,"Illness List:
+    1. Allergic reaction
+    2. Chickenpox
+    3. Contact dermatitis
+    4. Urticaria (hives)",0,0,"I have red spots all over my body, and they are itchy. Some of the spots are a different color than my skin. I also have some lumps or pimples on my skin."
+29,fungal infection,"Illness List:
+    1. Tinea Versicolor
+    2. Pityriasis Rosea
+    3. Lichen Planus
+    4. Contact Dermatitis",1,5,I have a really itchy rash on my skin and there are some weird spots that are a different color. There are also some bumps on my skin that look like little knots. I think it might be a fungal infection.
+30,gastroesophageal reflux disease,"Illness List:
+    1. Gastroesophageal reflux disease (GERD)
+    2. Esophagitis
+    3. Hiatal hernia
+    4. Achalasia",1,5,"I have trouble swallowing, and I don't feel like eating. I often feel full, even after eating just a little. I also have heartburn, nausea, and tingling in my throat."
+31,gastroesophageal reflux disease,"Illness List:
+    1. Gastroesophageal Reflux Disease (GERD)
+    2. Esophageal Stricture
+    3. Achalasia
+    4. Hiatal Hernia",1,5,"I'm having trouble eating, and it's hard to swallow. I feel full even after eating a small meal. I also have nausea, heartburn, and a tingling sensation in my throat."
+32,gastroesophageal reflux disease,"Illness List:
+    1. Gastroesophageal Reflux Disease (GERD)
+    2. Hiatal Hernia
+    3. Peptic Ulcer Disease
+    4. Esophagitis",1,5,I get heartburn and indigestion a lot. It's worse when I eat spicy or fatty foods. I also get chest pain that gets worse when I lie down or bend over.
+33,hypertension,"Illness List:
+    1. Dehydration
+    2. Heat Exhaustion
+    3. Arrhythmia
+    4. Hypertension",1,1,I was in the middle of a workout when I suddenly felt lightheaded and dizzy. I also had a headache and chest pain. I've been having trouble balancing myself since then.
+34,hypertension,"Illness List:
+    1. Migraine
+    2. Anxiety or Panic Disorder
+    3. Heart Attack or Angina
+    4. Hypertension",1,1,I've been having a headache and chest pain. I've also been feeling dizzy and unstable. I'm also having problems focusing.
+35,hypertension,"Illness List:
+    1. Anemia
+    2. Dehydration
+    3. Anxiety or Panic Attack
+    4. Heart-related Conditions",0,0,"I've been feeling really dizzy and lightheaded lately. I also have a headache and my chest hurts. I'm not sure what's going on, but I'm worried."
+36,impetigo,"Illness List:
+    1. Herpes Simplex Virus Infection
+    2. Measles
+    3. Varicella (Chickenpox)
+    4. Scarlet Fever",0,0,I have a fever and a headache. I have sores near my nose and rashes on my neck. I'm really struggling right now.
+37,impetigo,"Illness List:
+    1. Measles
+    2. Scarlet Fever
+    3. Shingles (Herpes Zoster)
+    4. Lupus",0,0,"I'm running a fever and I have a rash on my face, neck, and arms. The rash is painful and red. I'm worried about my health."
+38,impetigo,"Illness List:
+    1. Systemic Lupus Erythematosus (SLE)
+    2. Scarlet Fever
+    3. Measles
+    4. Fifth Disease",0,0,I have been feeling really tired and I have a fever. I have a rash on my face and it is very itchy. I can't sleep because of the rash.
+39,jaundice,"Illness List:
+    1. Hepatitis
+    2. Gallstones
+    3. Pancreatitis
+    4. Liver Cirrhosis",1,5,"I have been feeling really sick lately. I have been itching all over, and I have been vomiting. I have also lost a lot of weight, and I have a fever. My skin has turned yellow, and my urine is dark. I have also been having abdominal pain."
+40,jaundice,"Illness List:
+    1. Hepatitis
+    2. Cirrhosis
+    3. Pancreatic Cancer
+    4. Gallstones",1,5,I've been feeling really sick and tired. I've lost weight and have a fever. My urine is dark and my skin is yellow. I also have stomach pain.
+41,jaundice,"Illness List:
+    1. Hepatitis
+    2. Liver cirrhosis
+    3. Gallstones
+    4. Pancreatic cancer",1,5,I have been having intense itching all over my body. I have also been vomiting and feeling very tired. I have lost a lot of weight and have a high fever. My skin has turned yellow and my urine is dark. I have also been having abdominal pain.
+42,malaria,"Illness List:  
+    1. Influenza  
+    2. Malaria  
+    3. Chickenpox  
+    4. Dengue Fever",1,3,"I've been feeling really sick for the past few days. I have a high fever, chills, and intense itching. I've also been vomiting and sweating a lot. My head hurts and I feel nauseous and achy all over."
+43,malaria,"Illness List:
+    1. Influenza (Flu)
+    2. Gastroenteritis
+    3. Dengue Fever
+    4. Malaria",1,1,"I've been feeling really sick lately. I've been having a high fever, chills, and vomiting. I'm also sweating a lot and have a headache. I feel nauseous and my muscles are really sore."
+44,malaria,"Illness List:
+    1. Influenza (Flu)
+    2. COVID-19
+    3. Dengue Fever
+    4. Malaria",1,1,"I've been having a really high fever, chills, and nausea. I've also been sweating a lot and have a headache. My muscles are sore and I feel sick."
+45,migraine,"Illness List:
+    1. Tension Headaches
+    2. Migraine
+    3. Cervical Spondylosis
+    4. Anxiety Disorder",1,3,"I've been having a lot of headaches lately, and they're getting worse. I also have a sore neck, and I'm feeling anxious and irritated. I've also been having trouble seeing things clearly."
+46,migraine,"Illness List:
+    1. Migraine
+    2. Tension Headache
+    3. Cervical Spondylosis
+    4. Anxiety Disorder",1,5,"I have been having frequent headaches and blurred vision. I also have a stiff neck, anxiety, irritability, and visual disturbance. I have also been having stomach problems, including indigestion and acidity."
+47,migraine,"Illness List:
+    1. Migraine
+    2. Hypoglycemia
+    3. Tension Headache
+    4. Depression",1,5,I've been having a lot of headaches and blurred vision. I also feel like I'm always hungry and my neck is sore. I've been feeling really irritable and sad too.
+48,peptic ulcer disease,"Illness List:
+    1. Irritable Bowel Syndrome (IBS)
+    2. Gastroesophageal Reflux Disease (GERD)
+    3. Celiac Disease
+    4. Small Intestinal Bacterial Overgrowth (SIBO)",0,0,"I have a lot of hunger and I can't seem to get enough to eat. My stomach hurts and cramps sometimes. After I eat, I get really bad gas and bloating."
+49,peptic ulcer disease,"Illness List:
+    1. Peptic Ulcer Disease
+    2. Gastroesophageal Reflux Disease (GERD)
+    3. Chronic Gastritis
+    4. Helicobacter pylori Infection",1,5,I have been losing weight and having trouble gaining weight. I have pain and discomfort in my stomach that is relieved by taking antacids. My mouth tastes bad.
+50,peptic ulcer disease,"Illness List:
+    1. Irritable Bowel Syndrome (IBS)
+    2. Gastritis
+    3. Celiac Disease
+    4. Small Intestinal Bacterial Overgrowth (SIBO)",0,0,I have a really strong appetite and I'm always hungry. My stomach sometimes aches and cramps. I have really painful gas and bloating after eating.
+51,pneumonia,"Illness List:
+    1. Pneumonia
+    2. Acute Bronchitis
+    3. Chronic Obstructive Pulmonary Disease (COPD) Exacerbation
+    4. Pulmonary Embolism",1,5,I'm having trouble breathing and I feel really uncomfortable. I'm sweating a lot and my throat is really sore. My chest hurts and my heart is beating fast. I'm coughing up a lot of mucus and it's brown.
+52,pneumonia,"Illness List:
+    1. Pneumonia
+    2. Acute Bronchitis
+    3. COVID-19
+    4. Chronic Obstructive Pulmonary Disease (COPD) exacerbation",1,5,"I've been feeling really sick for the past few days. I have a fever, I can't catch my breath, and I'm coughing up a lot of phlegm. My chest hurts, and my heart is racing."
+53,pneumonia,"Illness List:
+    1. Pneumonia
+    2. Chronic Obstructive Pulmonary Disease (COPD) exacerbation
+    3. Pulmonary Embolism
+    4. Bronchitis",1,5,I'm feeling really hot. I can't breathe well. I'm sweating a lot. I'm shaking. I'm really tired. My heart is beating fast. I have some brown stuff coming up when I cough.
+54,psoriasis,"Illness List:
+    1. Psoriasis
+    2. Eczema
+    3. Lichen Planus
+    4. Fungal Infection",1,5,I have a rash on my skin that is red and itchy. It bleeds when I scratch it. I also have little dents in my nails and they are inflamed.
+55,psoriasis,"Illness List:
+    1. Psoriasis
+    2. Dermatitis
+    3. Lupus
+    4. Rheumatoid arthritis",1,5,"I've had this rash on my arms, legs, and chest for a few weeks. It's red and itchy, and it's covered in dry, scaly spots. I also have some pain in my joints."
+56,psoriasis,"Illness List:
+    1. Psoriasis
+    2. Lichen Planus
+    3. Eczema (Atopic Dermatitis)
+    4. Candidiasis",1,5,"I have red, itchy, and scaly patches on my skin. They are often on my genitals, but I also have them on other parts of my body. They are sometimes painful and uncomfortable."
+57,typhoid,"Illness List:
+    1. Gastroenteritis
+    2. Food poisoning
+    3. Irritable bowel syndrome (IBS)
+    4. Viral infection (such as norovirus)",0,0,"I have been having diarrhea for a few days now. I have loose, watery stools and I have to go to the bathroom a lot. I also feel nauseated and have lost my appetite. I have a mild fever too."
+58,typhoid,"Illness List:
+    1. Gastroenteritis
+    2. Intestinal Obstruction
+    3. Appendicitis
+    4. Irritable Bowel Syndrome (IBS)",0,0,"I'm feeling really weak. I've been having a lot of stomach pain and constipation, and I've been vomiting a lot. I can't eat anything because of the pain."
+59,typhoid,"Illness List:
+    1. Gastroenteritis
+    2. Appendicitis
+    3. Viral Infection
+    4. Urinary Tract Infection (UTI)",0,0,I have a high fever and a headache. I also have a lot of pain in my belly. I can't go to work because of this.
+60,urinary tract infection,"Illness List:
+    1. Urinary Tract Infection (UTI)
+    2. Bladder Infection (Cystitis)
+    3. Kidney Infection (Pyelonephritis)
+    4. Interstitial Cystitis",1,5,"I have a pain in my lower abdomen and I feel like I have to pee all the time. When I do pee, it burns and I feel like I'm not getting everything out. I've also been feeling really cold and weak."
+61,urinary tract infection,"Illness List:
+    1. Urinary Tract Infection (UTI)
+    2. Kidney Stones
+    3. Bladder Infection
+    4. Interstitial Cystitis",1,5,"I've been having a hard time peeing. It hurts when I go, and it's bloody. My head hurts, and my urine smells really bad. I can't control when I have to go, and it's really urgent when I do."
+62,urinary tract infection,"Illness List:
+    1. Urinary Tract Infection (UTI)
+    2. Kidney Infection (Pyelonephritis)
+    3. Bladder Infection (Cystitis)
+    4. Urethritis",1,5,"I've been having to pee a lot, and it hurts when I do. Sometimes I see blood in my pee, and it smells really bad. I'm worried that I have an infection. What should I do?"
+63,varicose veins,"Illness List:
+    1. Peripheral Artery Disease (PAD)
+    2. Deep Vein Thrombosis (DVT)
+    3. Chronic Venous Insufficiency (CVI)
+    4. Vitamin Deficiency (e.g., Vitamin D or K deficiency)",0,0,I have been having cramps in my calves when I walk or stand for long periods of time. I have also noticed bruise marks on my calves. I feel tired very soon.
+64,varicose veins,"Illness List:
+    1. Cellulitis
+    2. Varicose Veins
+    3. Venous Insufficiency
+    4. Thrombophlebitis",1,3,I have some red and inflamed skin on my legs. I think I can see some of the swollen blood vessels. I'm really worried about it.
+65,varicose veins,"Illness List:
+    1. Varicose veins
+    2. Chronic venous insufficiency
+    3. Deep vein thrombosis
+    4. Lipodermatosclerosis",1,5,I have some veins in my legs that are bulging out. I'm concerned about it. I'm also overweight and I think that might be the cause.
