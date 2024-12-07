@@ -12,12 +12,13 @@ class Doctor:
     "content": """You are a virtual family doctor. Collect symptom descriptions from the user and generate a list of possible illnesses.
 
 Instructions:
-1. Gather detailed symptom descriptions from the conversation history.
-2. Generate a list of exactly 4 possible illnesses, ranked by relevance.
-3. Determine if the patient has more questions:
+1. Determine if the patient has more questions:
    - If the patient clearly states they have no more questions, set "if_continue" to 0.
    - Otherwise, set "if_continue" to 1.
-4. Generate a response:
+2. Gather detailed symptom descriptions from the conversation history.
+3. Ask the user if they have any other medical history or are currently using any medications or additional symptoms.
+4. Generate a list of exactly 4 possible illnesses, ranked by relevance.
+5. Generate a response:
    - If the user has no further questions, summarize the possible illnesses for the user and advise them to consult a medical professional.
    - Otherwise, ask the user for more information about their symptoms to improve the accuracy of the diagnosis.
 
@@ -43,7 +44,16 @@ Output Format:
         )
         return response.choices[0].message.content
 
+
     def _check_format(self, agent, input):
+        """
+        The function ensures responses from different AI agents are in the correct format.
+
+        agent: The specific agent to use (doctor, doctor with RAG, or comparison)
+        input: prompt for the agent
+
+        return: agent responses
+        """
         if agent == self._doctor:
             while True:
                 response = self._doctor(input)
@@ -56,9 +66,19 @@ Output Format:
                     _ = diagnosis[0]
                     return if_continue, diagnosis, question
                 except:
+                    print(f"doctor (wrong format): {response}")
                     continue
 
-    def ask_doctor(self, full_history, if_continue):
+
+    def ask_doctor(self, _t, _d, full_history):
+        """
+        Function to interact with doctor model
+
+        full_history: complete conversation history and diagnoses
+
+        return: if_continue, diagnosis, question, full_history
+        """ 
+        if_continue, _, _ = self._check_format(self._doctor, full_history[-1])
         if if_continue == 1:
             prompt = f"Conversation History: \n" + '\n'.join(full_history)
         else:
@@ -81,7 +101,7 @@ Output Format:
             print(response)
             user_input = input()
             full_history.append(f"Patient: {user_input}")
-            if_continue, diagnosis, response, full_history = self.ask_doctor(full_history, if_continue)
+            if_continue, diagnosis, response, full_history = self.ask_doctor(full_history, if_continue, _)
 
             diagnoses_list.append(diagnosis)
         print(response)
