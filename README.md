@@ -24,7 +24,7 @@ Machine learning supports this solution because it can effectively handle the co
 a. Set an API key:
 
   ```bash
-  api_key = 'ENTER YOUR API'
+  api_key = 'ENTER YOUR API KEY'
   ```
 
 b. For RAG models, construct a dataframe for embedding:
@@ -48,7 +48,8 @@ c. Import a model:
    - **ask()**: Starts a conversation with the virtual doctor.
      - **Parameters**:
        - `if_return`: bool, default = False.  
-        Returns the similarity score, full history of patient-doctor conversations and diagnoses, and a diagnoses list.
+     - **Returns**:
+       - If `if_return`=True, returns the similarity score, full history of patient-doctor conversations and diagnoses, and a diagnoses list.
          
    (See code example in `model_sample_output.txt`.)
 
