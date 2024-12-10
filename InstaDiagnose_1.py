@@ -68,7 +68,7 @@ Output Format:
                     continue
 
 
-    def ask_doctor(self, full_history):
+    def ask_doctor(self, _t=None, _d=None, full_history=None):
         """
         Function to interact with doctor model
 
@@ -99,7 +99,7 @@ Output Format:
         while if_continue==1:
             user_input = input("Patient: ")
             full_history.append(f"Patient: {user_input}")
-            if_continue, diagnosis, response, full_history = self.ask_doctor(full_history)
+            if_continue, diagnosis, response, full_history = self.ask_doctor(None, None, full_history)
 
             diagnoses_list.append(diagnosis)
 
