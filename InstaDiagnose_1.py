@@ -3,7 +3,7 @@ import numpy as np
 import json
 
 class Doctor:
-    def __init__(self, key, threshold=0.85):
+    def __init__(self, key, threshold=0.75):
         self._client = OpenAI(api_key=key)
         self._threshold = threshold
 
@@ -57,7 +57,6 @@ Output Format:
         if agent == self._doctor:
             while True:
                 response = self._doctor(input)
-                print(f"Doctor response: {response}")
                 try:
                     response = json.loads(response)
                     if_continue = response['if_continue']
@@ -66,11 +65,10 @@ Output Format:
                     _ = diagnosis[0]
                     return if_continue, diagnosis, question
                 except:
-                    print(f"doctor (wrong format): {response}")
                     continue
 
 
-    def ask_doctor(self, _t, _d, full_history):
+    def ask_doctor(self, full_history):
         """
         Function to interact with doctor model
 
@@ -95,16 +93,17 @@ Output Format:
 
         threshold = self._threshold
         if_continue= 1
-        response = "Enter your medical question: "
+        response = "Doctor: Hello! I'm your virtual doctor. Please describe your symptoms or concerns.\n"
+        print(response)
 
         while if_continue==1:
-            print(response)
-            user_input = input()
+            user_input = input("Patient: ")
             full_history.append(f"Patient: {user_input}")
-            if_continue, diagnosis, response, full_history = self.ask_doctor(full_history, if_continue, _)
+            if_continue, diagnosis, response, full_history = self.ask_doctor(full_history)
 
             diagnoses_list.append(diagnosis)
-        print(response)
+
+            print(f"\nDoctor: {response}\n")
         
         if if_return:
             return full_history, diagnoses_list

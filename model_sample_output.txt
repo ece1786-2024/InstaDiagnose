@@ -1,0 +1,121 @@
+Last login: Tue Dec 10 01:35:03 on ttys005
+(base) weiyiwu@Weiyis-Laptop ~ % cd Desktop/InstaDiagnose 
+(base) weiyiwu@Weiyis-Laptop InstaDiagnose % conda activate ece1786  
+(ece1786) weiyiwu@Weiyis-Laptop InstaDiagnose % python3                 
+Python 3.11.10 (main, Oct  3 2024, 02:26:51) [Clang 14.0.6 ] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pandas as pd
+>>> api_key = ''
+>>> df = pd.read_csv('RAG_dataset/new_42_dataset.csv')
+>>> emb = pd.read_pickle('RAG_dataset/text_embeddings2.pkl')
+>>> df_embed = pd.read_csv('RAG_dataset/text_embeddings2.csv')
+>>> df_embed['embeddings'] = emb
+>>> 
+>>> 
+>>> import RAG_Diagnose_3
+>>> doctor_rag_3 = RAG_Diagnose_3.Doctor(api_key, df_embed, 0.75)
+>>> doctor_rag_3.ask()
+Doctor: Hello! I'm your virtual doctor. Please describe your symptoms or concerns.
+
+Patient: Hello, Doctor. I've been having a really bad rash on my skin lately. It's full of pus-filled pimples and blackheads. My skin has also been scarring a lot.
+
+Doctor: I'm sorry to hear that you're dealing with this uncomfortable rash. I'd like to gather some more information to help better understand your condition. 
+
+1. How long have you been experiencing these skin issues?
+2. Do you have any itching or burning sensations associated with the rash?
+3. Have you recently started using any new skincare products, medications, or detergents?
+4. Do you have any known allergies?
+5. Are there any other symptoms you are experiencing, such as fever or swollen lymph nodes?
+6. Can you tell me if you've had similar skin issues in the past?
+7. Are you currently taking any medications or undergoing any treatments?
+
+Your responses will assist in narrowing down possible causes for your symptoms. 
+
+Patient: I haven't noticed any fever, but the rash is really itchy. I haven't identified any specific triggers that make it worse.
+
+Doctor: Based on the symptoms you've described and the information provided, the potential conditions could include:
+
+1. **Acne Vulgaris** - This is a common skin condition characterized by pimples, blackheads, and scarring, often involving pus-filled lesions.
+2. **Contact Dermatitis** - This could be triggered by an allergic reaction or irritant leading to an itchy rash.
+3. **Folliculitis** - An infection of the hair follicles that can cause itchy pus-filled bumps.
+4. **Impetigo** - A bacterial skin infection that sometimes leads to itchy blisters and pustules.
+
+Would you like to provide more information, or do you have any additional questions about these possibilities? 
+
+Patient: I haven't changed any skincare products or detergents recently, and I haven't been in any unusual environments. My routine and diet have been the same. I do not have more information.
+
+Doctor: Based on the similarity score and the discussion we've had so far, it's still possible that the conditions affecting your skin could be one of the following:
+
+1. **Acne Vulgaris** 
+2. **Contact Dermatitis** 
+3. **Folliculitis**
+4. **Impetigo**
+
+While I understand you don't have additional information to provide at the moment, if you ever notice any changes or new symptoms, feel free to let me know. Please take care of your skin, and if you have more concerns later, I'm here to help. 
+
+Patient: I do not have more information
+
+Doctor: Based on our conversation and the symptoms you have described, the possible conditions you might be dealing with are:
+
+1. **Acne Vulgaris** - Characterized by pimples, blackheads, and possible scarring, often with pus-filled lesions.
+2. **Contact Dermatitis** - An itchy rash caused by contact with an allergen or irritant.
+3. **Folliculitis** - An infection of the hair follicles, leading to itchy, pus-filled bumps.
+4. **Impetigo** - A bacterial skin infection resulting in itchy blisters and pustules.
+
+If you have any more questions or notice any new symptoms in the future, feel free to reach out. Take care. 
+
+Patient: I do not have more information or question
+
+Doctor: Based on our discussion and the symptoms you've described, the possible conditions you might be dealing with are:
+
+1. **Acne Vulgaris** - Characterized by pimples, blackheads, and possible scarring, often with pus-filled lesions.
+2. **Contact Dermatitis** - An itchy rash caused by contact with an allergen or irritant.
+3. **Folliculitis** - An infection of the hair follicles, leading to itchy, pus-filled bumps.
+4. **Impetigo** - A bacterial skin infection resulting in itchy blisters and pustules.
+
+I recommend consulting a medical professional for a thorough examination and an accurate diagnosis. They can provide you with the best treatment options specific to your condition. Take care, and I'm here if you have any more questions in the future. 
+
+>>> import InstaDiagnose_3
+>>> doctor_3 = InstaDiagnose_3.Doctor(api_key, 0.75)
+>>> doctor_3.ask()
+Doctor: Hello! I'm your virtual doctor. Please describe your symptoms or concerns.
+
+Patient: Hello, Doctor. I've been having a really bad rash on my skin lately. It's full of pus-filled pimples and blackheads. My skin has also been scarring a lot.
+
+Doctor: I'm sorry to hear about the discomfort you're experiencing with your skin. To better understand your condition and provide more accurate guidance, I have a few questions:
+
+1. How long have you been experiencing these symptoms?
+2. Have you noticed any specific triggers, such as certain foods, skincare products, or environmental factors?
+3. Are you currently using any medications or treatments for this skin condition?
+4. Do you have any history of skin allergies or other related medical conditions?
+
+Your answers will help us narrow down possible causes and offer more tailored advice.
+
+Patient: I haven't noticed any fever, but the rash is really itchy. I haven't identified any specific triggers that make it worse.
+
+Doctor: Thank you for sharing this information with me. Since the symptoms you've described have been persisting and no specific triggers have been identified, I have a few more questions to help us further narrow down the possible causes:
+
+1. How long have you been dealing with the itchy rash and pus-filled pimples?
+2. Are there specific areas of your body where the rash is more concentrated?
+3. Have you recently started using any new skincare or cosmetic products?
+4. Do you have any personal or family history of skin conditions or allergies?
+5. Are you currently on any medications, whether for the skin condition or other health issues?
+
+Your answers will assist in providing a clearer picture of your condition.
+
+Patient: I haven't changed any skincare products or detergents recently, and I haven't been in any unusual environments. My routine and diet have been the same. I do not have more information.
+
+Doctor: Based on the symptoms and information provided, here are four possible conditions that could be affecting your skin:
+
+1. **Acne Vulgaris**: A common skin condition that occurs when hair follicles become clogged with oil and dead skin cells, leading to pus-filled pimples and blackheads.
+
+2. **Folliculitis**: An infection or inflammation of the hair follicles, often resulting in itchy, pus-filled bumps.
+
+3. **Contact Dermatitis**: An allergic reaction or irritation of the skin caused by contact with certain substances, although no specific triggers were identified in your case.
+
+4. **Impetigo**: A contagious skin infection typically caused by bacteria, which can result in itchy, painful sores and scarring.
+
+It's important to consult with a healthcare professional for a definitive diagnosis and appropriate treatment plan. Please reach out to a dermatologist or your doctor for further evaluation. Take care of yourself!
+
+>>> quit()
+(ece1786) weiyiwu@Weiyis-Laptop InstaDiagnose % 

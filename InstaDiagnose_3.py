@@ -3,7 +3,7 @@ import numpy as np
 import json
 
 class Doctor:
-    def __init__(self, key, threshold=0.85):
+    def __init__(self, key, threshold=0.75):
         self._client = OpenAI(api_key=key)
         self._threshold = threshold
 
@@ -126,7 +126,6 @@ class Doctor:
                     diagnosis = response['illness_list']
                     return if_continue, diagnosis
                 except:
-                    print(f'diagnose(wrong format): {response}')
                     continue
 
         elif agent == self._compare_similarity:
@@ -138,7 +137,6 @@ class Doctor:
                     similarity = float(response)
                     return similarity
                 except:
-                    print(f'similarity(wrong format): {response}')
                     continue
 
 
@@ -197,17 +195,16 @@ class Doctor:
         diagnoses_list = []
         threshold = self._threshold
         if_continue = 1
-        response = "Enter your medical question: "
+        print("Doctor: Hello! I'm your virtual doctor. Please describe your symptoms or concerns.\n")
 
         while if_continue==1:
-            print(response)
-            user_input = input()
+            user_input = input("Patient: ")
             full_history.append(f"Patient: {user_input}")
             if_continue, diagnosis, response, full_history = self.ask_doctor(threshold, diagnoses_list, full_history)
 
             diagnoses_list.append(diagnosis)
 
-        print(response)
+            print(f"\nDoctor: {response}\n")
 
         if if_return:
             return full_history, diagnoses_list

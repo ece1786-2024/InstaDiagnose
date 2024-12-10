@@ -90,18 +90,13 @@ class Doctor:
 
     def _get_relevant_conditions(self, full_history, top_k=4):
         # Combine all patient inputs into one query
-        # patient_inputs = [msg.split(": ")[1] for msg in full_history if msg.startswith("Patient:")]
-        # combined_query = " ".join(patient_inputs)
         combined_query = '\n'.join([full_history[i] for i in range(0, len(full_history)-1, 3)])
         combined_query = self._translation(combined_query)
-
-        print("Patient Symptoms:", combined_query, '\n')
 
         # Get embedding for the query
         query_embedding = self._get_embedding(combined_query)
 
         # Calculate similarities
-        # similarities = cosine_similarity([query_embedding], self._text_embeddings)[0]
         similarities = self._df_embed['embeddings'].apply(lambda x: np.dot(x, query_embedding))
 
         # Get top k most similar cases
@@ -166,7 +161,6 @@ class Doctor:
                     question = response['response']
                     return if_continue, diagnosis, question
                 except:
-                    print(f'diagnose (wrong format): {response}')
                     response = self._doctor(input)
                     continue
         
@@ -180,7 +174,6 @@ class Doctor:
                     question = response['response']
                     return if_continue, diagnosis, question
                 except:
-                    print(f'doctor RAG (wrong format): {response}')
                     response = self._doctor_rag(input, context)
 
 
@@ -193,7 +186,6 @@ class Doctor:
                     similarity = float(response)
                     return similarity
                 except:
-                    print(f'similarity (wrong format): {response}')
                     response = self._compare_similarity(input1, input2)
                     continue
 
@@ -203,7 +195,6 @@ class Doctor:
             similarity = self._check_format(self._compare_similarity, [diagnoses_list[-1], diagnoses_list[-2]])
 
         if_continue, _, _ = self._check_format(self._doctor, full_history[-1])
-        # print(f"if_continue: {if_continue}")
 
         if if_continue == 1:
             prompt = f"Conversation History: \n" + '\n'.join(full_history) + f"\n\nSimilarity Score: {similarity}\nThreshold: {threshold}"
@@ -223,19 +214,17 @@ class Doctor:
 
         threshold = self._threshold
         if_continue, similarity = 1, 0.0
-        print("Doctor: Hello! I'm your virtual doctor. Please describe your symptoms or concerns.")
+        print("Doctor: Hello! I'm your virtual doctor. Please describe your symptoms or concerns.\n")
 
         while if_continue==1:
             user_input = input("Patient: ")
 
             full_history.append(f"Patient: {user_input}")
-            print(f"Patient: {user_input}")
 
             if_continue, diagnosis, question, full_history = self.ask_doctor(threshold, diagnoses_list, full_history)
-
             diagnoses_list.append(diagnosis)
 
-            print(f"\nDoctor: {question}")
+            print(f"\nDoctor: {question}\n")
 
         if if_return:
             return similarity, full_history, diagnoses_list

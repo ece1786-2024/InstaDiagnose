@@ -2,7 +2,7 @@ from openai import OpenAI
 import json
 
 class Doctor:
-    def __init__(self, key, threshold=0.85):
+    def __init__(self, key, threshold=0.75):
         self._client = OpenAI(api_key=key)
         self._threshold = threshold
 
@@ -94,7 +94,6 @@ class Doctor:
                     question = response['response']
                     return if_continue, diagnosis, question
                 except:
-                    print(f"diagnosis (wrong format): {response}")
                     response = self._doctor(input)
                     continue
 
@@ -107,7 +106,6 @@ class Doctor:
                     similarity = float(response)
                     return similarity
                 except:
-                    print(f"similarity (wrong format): {response}")
                     response = self._compare_similarity(input1, input2)
                     continue
     
@@ -150,16 +148,17 @@ class Doctor:
 
         threshold = self._threshold
         if_continue, similarity = 1, 0.0
-        response = "Enter your medical question: "
+        response = "Doctor: Hello! I'm your virtual doctor. Please describe your symptoms or concerns.\n"
+        print(response)
 
         while if_continue==1:
-            print(response)
-            user_input = input()
+            user_input = input("Patient: ")
             full_history.append(f"Patient: {user_input}")
             if_continue, diagnosis, response, full_history = self.ask_doctor(threshold, diagnoses_list, full_history)
 
             diagnoses_list.append(diagnosis)
-        print(response)
+
+            print(f"\nDoctor: {response}\n")
         
         if if_return:
             return similarity,full_history, diagnoses_list

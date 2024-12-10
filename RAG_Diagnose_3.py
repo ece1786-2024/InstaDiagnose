@@ -156,7 +156,7 @@ class Doctor:
                     diagnosis = response['illness_list']
                     return if_continue, diagnosis
                 except:
-                    print(f'diagnose (wrong format): {response}')
+                    # print(f'diagnose (wrong format): {response}')
                     response = self._diagnose(input)
                     continue
 
@@ -168,7 +168,7 @@ class Doctor:
                     diagnosis = response['illness_list']
                     return diagnosis
                 except:
-                    print(f'diagnose RAG (wrong format): {response}')
+                    # print(f'diagnose RAG (wrong format): {response}')
                     response = self._diagnose_rag(input, context)
 
         elif agent == self._compare_similarity:
@@ -180,7 +180,7 @@ class Doctor:
                     similarity = float(response)
                     return similarity
                 except:
-                    print(f'similarity (wrong format): {response}')
+                    # print(f'similarity (wrong format): {response}')
                     continue
 
 
@@ -258,18 +258,16 @@ class Doctor:
         diagnoses_list = []
         threshold = self._threshold
         if_continue = 1
-        response = "Doctor: Hello! I'm your virtual doctor. Please describe your symptoms or concerns."
+        print("Doctor: Hello! I'm your virtual doctor. Please describe your symptoms or concerns.\n")
 
         while if_continue==1:
-            print(f"Doctor: {response}\n")
-            user_input = input()
+            user_input = input("Patient: ")
             full_history.append(f"Patient: {user_input}\n")
+
             if_continue, diagnosis, response, full_history = self.ask_doctor(threshold, diagnoses_list, full_history)
-
             diagnoses_list.append(diagnosis)
-            full_history.append(f"Doctor: {response}\n")
 
-        print(response, '\n')
+            print(f"\nDoctor: {response}", '\n')
 
         if if_return:
             return full_history, diagnoses_list
